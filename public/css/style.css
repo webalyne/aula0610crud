@@ -52,12 +52,15 @@ a {
 }
 
 .brand__mark {
-  padding: 5px 7px;
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
   border: 1px solid var(--rosa-300);
-  border-radius: 4px;
+  border-radius: 50%;
   color: var(--rosa-900);
   background: var(--rosa-100);
-  font-size: 0.72rem;
+  place-items: center;
+  font-size: 1rem;
 }
 
 .nav__links {
