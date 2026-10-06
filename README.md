@@ -1,11 +1,8 @@
 # CRUD de pessoas com busca por CPF
-
-Projeto acadêmico com as quatro operações CRUD em páginas separadas.
+Projeto da aula 06/10 as quatro operações CRUD em páginas separadas.
 O Express publica o front-end e o JSON Server fornece a API REST
 em `/api/pessoas`.
-
 ## Executar localmente
-
 Requisitos: Node.js 18 ou superior.
 
 ```bash
