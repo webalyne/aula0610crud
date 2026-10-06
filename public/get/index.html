@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultar pessoas | CPF Base</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="brand" href="/"
+          ><span class="brand__mark">CPF</span> CPF Base</a
+        >
+        <ul class="nav__links">
+          <li><a href="/post/">Cadastrar</a></li>
+          <li><a aria-current="page" href="/get/">Consultar</a></li>
+          <li><a href="/put/">Editar</a></li>
+          <li><a href="/delete/">Excluir</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <header class="page-heading">
+        <p class="eyebrow">GET /api/pessoas</p>
+        <h1>Consultar pessoas</h1>
+        <p class="lead">
+          Veja todos os registros ou filtre a lista por um CPF completo.
+        </p>
+      </header>
+      <section class="panel" aria-labelledby="list-title">
+        <h2 id="list-title">Registros cadastrados</h2>
+        <form id="search-form" class="search-bar">
+          <div class="field">
+            <label for="cpf-search">CPF</label
+            ><input
+              id="cpf-search"
+              name="cpf"
+              inputmode="numeric"
+              placeholder="000.000.000-00"
+              data-mask="cpf"
+              maxlength="14"
+            />
+          </div>
+          <button class="button" type="submit">Buscar CPF</button>
+        </form>
+        <div id="message" class="message" tabindex="-1" hidden></div>
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>CPF</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Idade</th>
+                <th>Telefone</th>
+                <th>Cidade/UF</th>
+                <th>RG</th>
+              </tr>
+            </thead>
+            <tbody id="people-table"></tbody>
+          </table>
+          <div id="empty" class="empty" hidden>Nenhum registro encontrado.</div>
+        </div>
+        <div class="form-actions">
+          <button id="show-all" class="button button--secondary" type="button">
+            Mostrar todos
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">CPF Base · Operação Read</footer>
+    <script src="/js/common.js"></script>
+    <script src="/get/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CRUD de pessoas com busca por CPF, Express e JSON Server."
+    />
+    <title>CPF Base | CRUD com JSON Server</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="brand" href="/"
+          ><span class="brand__mark">CPF</span> CPF Base</a
+        >
+        <ul class="nav__links">
+          <li><a href="/post/">Cadastrar</a></li>
+          <li><a href="/get/">Consultar</a></li>
+          <li><a href="/put/">Editar</a></li>
+          <li><a href="/delete/">Excluir</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Express + JSON Server</p>
+          <h1>Cadastro simples. Busca precisa por CPF.</h1>
+          <p class="lead">
+            Uma aplicação completa para cadastrar, consultar, editar e excluir
+            pessoas, com cada operação organizada em sua própria página.
+          </p>
+          <div class="hero__actions">
+            <a class="button" href="/post/">Cadastrar pessoa</a
+            ><a class="button button--secondary" href="/get/"
+              >Consultar registros</a
+            >
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="operacoes-title">
+        <p class="eyebrow">Operações disponíveis</p>
+        <h2 id="operacoes-title">CRUD em quatro páginas</h2>
+        <div class="operation-grid">
+          <a class="operation-card" href="/post/"
+            ><span class="operation-card__method">POST</span>
+            <h3>Cadastrar</h3>
+            <p>Adicione uma pessoa com dados pessoais e endereço.</p></a
+          >
+          <a class="operation-card" href="/get/"
+            ><span class="operation-card__method">GET</span>
+            <h3>Consultar</h3>
+            <p>Liste os registros ou encontre uma pessoa pelo CPF.</p></a
+          >
+          <a class="operation-card" href="/put/"
+            ><span class="operation-card__method">PUT</span>
+            <h3>Editar</h3>
+            <p>Localize um CPF e atualize os dados cadastrados.</p></a
+          >
+          <a class="operation-card" href="/delete/"
+            ><span class="operation-card__method">DELETE</span>
+            <h3>Excluir</h3>
+            <p>Confira os dados antes de remover um registro.</p></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      Projeto acadêmico de Programação para Internet
+    </footer>
+  </body>
+</html>

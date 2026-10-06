@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excluir pessoa | CPF Base</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="brand" href="/"
+          ><span class="brand__mark">CPF</span> CPF Base</a
+        >
+        <ul class="nav__links">
+          <li><a href="/post/">Cadastrar</a></li>
+          <li><a href="/get/">Consultar</a></li>
+          <li><a href="/put/">Editar</a></li>
+          <li><a aria-current="page" href="/delete/">Excluir</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <header class="page-heading">
+        <p class="eyebrow">DELETE /api/pessoas/:id</p>
+        <h1>Excluir pessoa</h1>
+        <p class="lead">
+          Localize o registro pelo CPF e confirme os dados antes da exclusão.
+        </p>
+      </header>
+      <section class="panel" aria-labelledby="delete-title">
+        <h2 id="delete-title">Buscar cadastro</h2>
+        <form id="search-form" class="search-bar">
+          <div class="field">
+            <label for="cpf-search">CPF</label
+            ><input
+              id="cpf-search"
+              name="cpf"
+              inputmode="numeric"
+              placeholder="000.000.000-00"
+              data-mask="cpf"
+              required
+              maxlength="14"
+            />
+          </div>
+          <button class="button" type="submit">Buscar registro</button>
+        </form>
+        <div id="message" class="message" tabindex="-1" hidden></div>
+        <div id="confirmation" hidden>
+          <div class="person-summary">
+            <strong id="person-name"></strong><br /><span
+              id="person-details"
+            ></span>
+          </div>
+          <p>Esta ação remove o registro da base de dados. Deseja continuar?</p>
+          <div class="form-actions">
+            <button
+              id="delete-button"
+              class="button button--danger"
+              type="button"
+            >
+              Excluir definitivamente</button
+            ><button
+              id="cancel-delete"
+              class="button button--secondary"
+              type="button"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">CPF Base · Operação Delete</footer>
+    <script src="/js/common.js"></script>
+    <script src="/delete/script.js"></script>
+  </body>
+</html>
